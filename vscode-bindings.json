@@ -1,0 +1,177 @@
+[
+    {
+        "key": "space r",
+        "command": "vscode-neovim.send",
+        "args": ":%s/\<<c-r><c-w>\>/<c-r><c-w>/gi",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "key": "space r",
+        "command": "vscode-neovim.send",
+        "args": ":s///gi",
+        "when": "editorTextFocus && neovim.mode == visual",
+    },
+    {
+        "command": "local-history.showAll",
+        "key": "space u",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "command": "find-it-faster.findFiles",
+        "key": "space p f",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "key": "space q",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorTextFocus && neovim.mode != insert"
+    },
+    {
+        "command": "editor.action.formatDocument",
+        "key": "space d",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "command": "find-it-faster.findWithinFiles",
+        "key": "space p s",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "command": "vscode-harpoon.addEditor",
+        "key": "space a",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "command": "vscode-harpoon.editEditors",
+        "key": "space e",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "command": "vscode-harpoon.gotoEditor1",
+        "key": "ctrl+j",
+        "when": "neovim.mode != insert",
+    },
+    {
+        "command": "vscode-harpoon.gotoEditor2",
+        "key": "ctrl+k",
+        "when": "neovim.mode != insert",
+    },
+    {
+        "command": "vscode-harpoon.gotoEditor3",
+        "key": "ctrl+l",
+        "when": "neovim.mode != insert",
+    },
+    {
+        "command": "vscode-harpoon.gotoEditor4",
+        "key": "ctrl+;",
+        "when": "neovim.mode != insert",
+    },
+    {
+        "command": "vscode-harpoon.gotoEditor5",
+        "key": "ctrl+n",
+        "when": "neovim.mode != insert",
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "key": "g b",
+        "command": "workbench.action.navigateBack",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "key": "space p c",
+        "command": "workbench.action.openChat.copilot",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "key": "space d",
+        "command": "editor.action.formatSelection",
+        "when": "editorTextFocus && neovim.mode == visual",
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "space i",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                // commands to run in sequence
+                "workbench.action.terminal.toggleTerminal",
+            ]
+        },
+    },
+    {
+        "key": "ctrl+2",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                // commands to run in sequence
+                "workbench.action.focusActiveEditorGroup"
+            ]
+        },
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-center-editor-window.center",
+        "when": "editorTextFocus || findWidgetVisible"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-vscode-neovim.ctrl-d",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal.d && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "-vscode-neovim.ctrl-u",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal.u && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+    },
+    {
+        "key": "ctrl+u", // or any other key combo
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                {
+                    "command": "cursorUp",
+                    "repeat": 32
+                },
+                "center-editor-window.center"
+            ]
+        },
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+d", // or any other key combo
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                {
+                    "command": "cursorDown",
+                    "repeat": 32
+                },
+                "center-editor-window.center"
+            ]
+        },
+        "when": "editorTextFocus && !editorReadonly"
+    }
+]

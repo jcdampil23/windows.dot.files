@@ -1,0 +1,66 @@
+{
+    "workbench.colorTheme": "Tokyo Storm AltSynt",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "zenMode.hideLineNumbers": false,
+    "editor.lineNumbers": "relative",
+    "editor.fontSize": 12,
+    "editor.fontLigatures": true,
+    "workbench.editor.showTabs": "single",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 1,
+    "editor.fontFamily": "FiraMono Nerd Font Mono",
+    "explorer.autoReveal": true,
+    "local-history.path": "~/.vscode-local-history",
+    "apc.electron": {
+        "titleBarStyle": "hiddenInset",
+        "trafficLightPosition": {
+            "x": 7,
+            "y": 5
+        },
+        "frame": false,
+        "transparent": false
+    },
+    "apc.font.family": "FiraMono Nerd Font Mono",
+    "apc.menubar.compact": false,
+    "window.titleBarStyle": "native",
+    "apc.statusBar": {
+        "enabled": true,
+        "height": 30,
+        "fontSize": 18
+    },
+    "terminal.integrated.fontSize": 12,
+    "apc.listRow": {
+        "fontSize": 10,
+        "parts": {
+            "extensions-list": {
+                "fontSize": 12,
+                "height": 60
+            },
+            "explorer-folders-view": {
+                "fontSize": 12,
+                "height": 18
+            }
+        }
+    },
+    "apc.header": {
+        "enabled": true,
+        "height": 30
+    },
+    "apc.sidebar.titlebar": {
+        "enabled": false,
+        "fontSize": 1,
+        "height": 30
+    },
+    "apc.activityBar": {
+        "position": "bottom",
+        "size": 25
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    }
+}
